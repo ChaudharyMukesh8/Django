@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Django</title>
+    <style>
+      body {
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    {% comment %}
+    <h1>Hello {{fname}}</h1>
+    {% endcomment %} {% comment %}
+    <h1>Name : {{nm|upper}}</h1>
+    <h1>Course Duration :{{du}}</h1>
+    <h1>Total seats : {{st}}</h1>
+    {% endcomment %} {% for nm in names reversed %}
+    <h1>
+      {% comment %} {{ forloop.counter }} {% endcomment %}
+      {{forloop.last}} {{nm}}
+    </h1>
+    <br />
+    {% endfor %}
+  </body>
+</html>

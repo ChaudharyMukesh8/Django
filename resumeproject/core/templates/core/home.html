@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %} {% load static %} {% block content %}
+<div>
+  <div class="text-center mt-5">
+    <img
+      src="{% static 'core/images/m.jpg' %}"
+      alt="profile pic"
+      class="img-thumbnail"
+      width="250px"
+      height="150px"
+    />
+  </div>
+  <div class="mt-5 text-white mx-5 text-justify">
+    <h1 class="font-weight-bold .satisfy-regular">Hello,</h1>
+    <div class="px-4" style="line-height: 2rem">
+      <p style="text-indent: 100px">
+        I am <b class="text-warning">Mukesh Chaudhary</b> having no experience
+        of full stack web development experience for industries work. <br />
+        I am a Btech student in BIET Lucknow from CSE branch .
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo fugiat
+        architecto cumque dolorum illo repellat molestiae minus nisi quos veniam
+        fuga tenetur hic, nemo odio alias illum et vel! Sit eaque nisi impedit
+        similique optio maxime dolore voluptatem repudiandae quos!
+      </p>
+    </div>
+  </div>
+  <div class="text-center">
+    <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mx-5"
+      >Hire Me</a
+    >
+
+    <a href="{% url 'contact' %}" class="btn btn-outline-info my-3">Contact</a>
+  </div>
+</div>
+{% endblock content %}

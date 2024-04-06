@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Django fees first</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    {% comment %}
+    <h1>Welcome to the Course of Django fess 1.o.</h1>
+    {% endcomment %} {% comment %}
+    <h1>{{nm|length}}</h1>
+    {% endcomment %} {% comment %}
+    <h1>{{nm|truncatewords:3}}</h1>
+    {% endcomment %}
+    <h2>{{dt|date:'D d M Y'}}</h2>
+    <h3>{{dt|time:'H:i'}}</h3>
+    <h2>{{dt|date:'SHORT_DATE_FORMAT'}}</h2>
+    <h3>{{dt|time:'TIME_FORMAT'}}</h3>
+  </body>
+</html>

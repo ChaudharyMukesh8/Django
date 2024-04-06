@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Welcome to home page {% endblock title %}</title>
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/core.css' %}" />
+    {% endblock corecss %}
+  </head>
+  <body>
+    {% block content %}
+    <h2>This is base class</h2>
+    {% endblock content %} {% include 'core/navbar.html' %}
+    <script src="{% static 'core/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.js' %}"></script>
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/popper.js' %}"></script>
+
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <i class="fa-solid fa-m"></i>
+  </body>
+</html>

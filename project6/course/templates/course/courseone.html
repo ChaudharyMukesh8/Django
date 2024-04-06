@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'course/css/style.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Django course</li>
+      </ul>
+    </nav>
+    <h2>Course name is {{cname}}</h2>
+    <img src="{% static 'course/images/pic2.avif' %}" alt="images" />
+    <img src="{% static 'course/images/pic1.avif' %}" alt="images" />
+    {% block content %}
+    <h1>this is home class of course</h1>
+    {% endblock content %}
+  </body>
+</html>
