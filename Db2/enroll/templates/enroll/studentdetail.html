@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Data base retrival</title>
+        <style>
+                th,td{
+                        border: 2px  solid black ;
+                }
+                </style>
+  </head>
+  <body>
+    <h1>Student page</h1>    
+  
+  {% if stu %}
+   <h1>show data </h1>
+   <h3> {{stu}} </h3>
+   <table>
+      <tr>
+        <th>ID</th>
+        <th>StuID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr> 
+ <!-- for multiple data retrieval -->
+ <!-- comment start for loop -->
+    {% comment %}{% for st in stu %}
+    <!-- <tr>
+     <td>{{st.id}}</td>
+     <td>{{st.stuid}}</td>
+     <td>{{st.stuname}}</td>
+     <td>{{st.stuemail}}</td>
+     <td>{{st.stupass}}</td>
+    </tr> -->
+
+    {% endfor %}
+    {% endcomment %}
+    <!-- comment end for loop -->
+    <!--For single data retrieval-->
+    <tr>
+     <td>{{stu.id}}</td>
+     <td>{{stu.stuid}}</td>
+     <td>{{stu.stuname}}</td>
+     <td>{{stu.stuemail}}</td>
+     <td>{{stu.stupass}}</td>
+    </tr>
+
+   </table>
+   
+
+  {% else %}
+   <h1>no data </h1>
+  {% endif %} 
+  </body>
+</html>

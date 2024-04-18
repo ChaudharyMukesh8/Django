@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>User Registration Form</title>
+   </head>     
+   <body>
+        <form action="" method="get">  
+         {% comment %} {% for field in form %}
+         {{form.name.label}}
+         {% endfor %} {% endcomment %}
+         {{form}}
+         <input type="submit" value="Register">
+            {% comment %} {{form.as_p}}    {% endcomment %}
+          {% comment %} <input type="submit" value="Submit"> {% endcomment %}
+        
+        
+        {% comment %} <div >
+         {{form.name.label}}<br>
+         {{form.name.vlaue}}<br>
+         {{form.name.html_name}}<br>
+         {{form.name.field.required}}
+         <br>
+        </div> {% endcomment %}
+         <hr>
+   </body>
+</html>

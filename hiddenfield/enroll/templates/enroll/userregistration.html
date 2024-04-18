@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>User Registration Form</title>
+   </head>     
+   <body>
+        <form action="" method="get">  
+
+         {% comment %} To show only visible fields {% endcomment %}
+
+          {% for field in form.visible_fields %}
+             {{field.label_tag}}
+             {{field}}
+          {% endfor %}
+
+          {% comment %} To hide the hidden fields {% endcomment %}
+          
+          {% for hidden in form.hidden_fields %}
+             {{hidden}}
+          {% endfor %}
+          <input type="submit" value="Submit">
+        </form>
+   </body>
+</html>
